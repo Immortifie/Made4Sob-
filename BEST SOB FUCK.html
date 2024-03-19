@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Notepad</title>
+<style>
+    button {
+        font-size: 15em; /* Set an even bigger font size */
+    }
+</style>
+</head>
+<body>
+
+<button onclick="openNotepad()">Click Me!</button>
+
+<script>
+function openNotepad() {
+    var textToWrite = "sob smells";
+    var textBlob = new Blob([textToWrite], { type: 'text/plain' });
+    var textUrl = URL.createObjectURL(textBlob);
+    window.open(textUrl, '_blank', 'width=400,height=400');
+}
+</script>
+
+</body>
+</html>
+
+</html>
